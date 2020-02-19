@@ -1,0 +1,45 @@
+{
+  "name": "@jshdev/eslint-config",
+  "version": "0.0.13",
+  "description": "Musma's ESLint config with TypeScript support",
+  "main": "index.js",
+  "author": "SeongHoon Jo <priveate1@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "eslintconfig",
+    "eslint-config",
+    "typescript",
+    "prettier",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JSHdev/eslint-config.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.0",
+    "eslint-plugin-unused-imports": "^0.1.2",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
