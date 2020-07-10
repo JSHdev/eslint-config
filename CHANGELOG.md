@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/JSHdev/eslint-config/compare/v0.0.16...v1.0.0) (2020-07-10)
+
 ### [0.0.16](https://github.com/JSHdev/eslint-config/compare/v0.0.15...v0.0.16) (2020-07-10)
 
 ### 0.0.15 (2020-07-10)
