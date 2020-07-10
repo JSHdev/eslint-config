@@ -1,13 +1,13 @@
 {
   "name": "@jshdev/eslint-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Musma's ESLint config with TypeScript support",
   "main": "index.js",
   "author": "SeongHoon Jo <priveate1@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "bump": "./bump.sh"
   },
   "keywords": [
     "eslint",
