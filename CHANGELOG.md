@@ -4,14 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.1.0](https://github.com/JSHdev/eslint-config/compare/v0.0.11...v0.1.0) (2020-07-12)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **eks:** `version` is now a mandatory property
+- **eks:** `version` is now a mandatory property
 
 ### Features
 
-* **eks:** support cluster version pinning ([9d9dffb](https://github.com/JSHdev/eslint-config/commit/9d9dffb9c2a24358afb06735cfd5be571240a72e))
+- **eks:** support cluster version pinning ([9d9dffb](https://github.com/JSHdev/eslint-config/commit/9d9dffb9c2a24358afb06735cfd5be571240a72e))
 
 ### 0.0.9 (2020-07-12)
 
