@@ -1,15 +1,16 @@
 name: Create Release
 on:
   push:
-    branches:
-      - master
+    tags:
+      - v*.*.*
 jobs:
   build:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - uses: olegtarasov/get-tag@v2
-        id: tagName
+      - name: Set output
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Get Changelog Entry
@@ -18,6 +19,12 @@ jobs:
         with:
           version: ${{ steps.tagName.outputs.tag }}
           path: ./CHANGELOG.md
+      - name: Check output
+        env:
+          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ steps.vars.outputs.tag }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
