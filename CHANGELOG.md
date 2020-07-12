@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.22](https://github.com/JSHdev/eslint-config/compare/v0.1.21...v0.1.22) (2020-07-12)
+
+
+### Bug Fixes
+
+* i3i3 ([acc436b](https://github.com/JSHdev/eslint-config/commit/acc436b8f1fa5d28b19496d39c5c04f83d796ade))
+
 ### [0.1.21](https://github.com/JSHdev/eslint-config/compare/v0.1.20...v0.1.21) (2020-07-12)
 
 
