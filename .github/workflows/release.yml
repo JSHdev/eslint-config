@@ -23,7 +23,7 @@ jobs:
         id: changelog_reader
         uses: mindsers/changelog-reader-action@v1
         with:
-          version: ${{ steps.tagName.outputs.tag }}
+          version: ${{ steps.vars.outputs.tag }}
           path: ./CHANGELOG.md
       - name: Create Release
         id: create_release
@@ -31,8 +31,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.tagName.outputs.tag }}
-          release_name: ${{ steps.tagName.outputs.tag }}
+          tag_name: ${{ steps.vars.outputs.tag }}
+          release_name: ${{ steps.vars.outputs.tag }}
           body: ${{ steps.changelog_reader.outputs.log_entry }} # This pulls from the GET CHANGELOG ENTRY step above, referencing it's ID to get its outputs object, which include a `log_entry`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           draft: false
           prerelease: false
