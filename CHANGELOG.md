@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/JSHdev/eslint-config/compare/v0.1.8...v0.1.9) (2020-07-12)
+
+
+### Bug Fixes
+
+* fkdkd ([ba0f691](https://github.com/JSHdev/eslint-config/commit/ba0f69196b79e381dca9ec44f9d60194a085b061))
+
 ### [0.1.8](https://github.com/JSHdev/eslint-config/compare/v0.1.7...v0.1.8) (2020-07-12)
 
 
