@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.23](https://github.com/JSHdev/eslint-config/compare/v0.1.22...v0.1.23) (2020-07-12)
+
+
+### Bug Fixes
+
+* dkdkd ([21636ea](https://github.com/JSHdev/eslint-config/commit/21636ea3cf33be974b8ab4ef9051fea7ac7d0711))
+* test ([c7304ed](https://github.com/JSHdev/eslint-config/commit/c7304ed7d70c63a1fc02da33862e3d1ade1d74b9))
+
 ### [0.1.22](https://github.com/JSHdev/eslint-config/compare/v0.1.21...v0.1.22) (2020-07-12)
 
 
