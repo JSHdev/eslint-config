@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.21](https://github.com/JSHdev/eslint-config/compare/v0.1.20...v0.1.21) (2020-07-12)
+
+
+### Bug Fixes
+
+* yuyu ([eaa872e](https://github.com/JSHdev/eslint-config/commit/eaa872e24cadcd92b3350269a951d9e0032a6e30))
+
 ### [0.1.20](https://github.com/JSHdev/eslint-config/compare/v0.1.19...v0.1.20) (2020-07-12)
 
 
