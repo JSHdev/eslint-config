@@ -8,10 +8,9 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - name: Get version from tag
-        id: tag_name
-        run: |
-          echo ::set-output name=current_version::${GITHUB_REF##*/}
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
         shell: bash
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,7 +18,7 @@ jobs:
         id: changelog_reader
         uses: mindsers/changelog-reader-action@v1
         with:
-          version: ${{ steps.tag_name.outputs.current_version }}
+          version: ${{ steps.get_version.outputs.VERSION }}
           path: ./CHANGELOG.md
       - name: Create Release
         id: create_release
@@ -27,8 +26,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.tag_name.outputs.current_version }}
-          release_name: Release ${{ steps.tag_name.outputs.current_version }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}
+          release_name: Release ${{ steps.get_version.outputs.VERSION }}
           body: ${{ steps.changelog_reader.outputs.log_entry }} # This pulls from the GET CHANGELOG ENTRY step above, referencing it's ID to get its outputs object, which include a `log_entry`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           draft: false
           prerelease: false
