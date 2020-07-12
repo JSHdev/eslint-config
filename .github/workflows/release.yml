@@ -1,10 +1,8 @@
 name: Create Release
 on:
   push:
-    branches:
-      - master
     tags:
-      - v*
+      - v*.*.*
 jobs:
   build:
     name: Create Release
@@ -12,29 +10,29 @@ jobs:
     steps:
       - name: Set output
         id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF}
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Get Changelog Entry
-        id: changelog_reader
-        uses: mindsers/changelog-reader-action@v1
-        with:
-          version: ${{ steps.tagName.outputs.tag }}
-          path: ./CHANGELOG.md
       - name: Check output
         env:
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
         run: |
           echo $RELEASE_VERSION
           echo ${{ steps.vars.outputs.tag }}
+      - name: Get Changelog Entry
+        id: changelog_reader
+        uses: mindsers/changelog-reader-action@v1
+        with:
+          version: ${{ steps.tagName.outputs.tag }}
+          path: ./CHANGELOG.md
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: $${{ github.ref }}
-          release_name: ${{ github.ref }}
+          tag_name: ${{ steps.tagName.outputs.tag }}
+          release_name: ${{ steps.tagName.outputs.tag }}
           body: ${{ steps.changelog_reader.outputs.log_entry }} # This pulls from the GET CHANGELOG ENTRY step above, referencing it's ID to get its outputs object, which include a `log_entry`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           draft: false
           prerelease: false
