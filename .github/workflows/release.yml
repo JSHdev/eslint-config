@@ -8,15 +8,7 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-      - name: Build base image
-        run: |
-          echo $SOURCE_NAME
-          echo $SOURCE_BRANCH
-          echo $github.event.release.tag_name
-        env:
-          SOURCE_NAME: ${{ steps.branch_name.outputs.SOURCE_NAME }}
-          SOURCE_BRANCH: ${{ steps.branch_name.outputs.SOURCE_BRANCH }}
-          github.event.release.tag_name: ${{ steps.branch_name.outputs.github.event.release.tag_name }}
+      - name: Checkout code
         uses: actions/checkout@v2
       - name: Get Changelog Entry
         id: changelog_reader
