@@ -1,6 +1,6 @@
 {
   "name": "@jshdev/eslint-config",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "description": "Musma's ESLint config with TypeScript support",
   "main": "index.js",
   "author": "SeongHoon Jo <priveate1@gmail.com>",
